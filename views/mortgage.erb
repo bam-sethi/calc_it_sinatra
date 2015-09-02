@@ -1,0 +1,24 @@
+<h1><%= @title %></h1>
+
+<form action="/morg" method="post">
+  <input type="num" name="loan" placeholder ="Your Loan"autofocus>
+  <input type="num" name="apr" placeholder="Interest Rate"autofocus>
+  <input type="num" name="term" placeholder="term" autofocus>
+
+  <button type="submit">calculate monthly payment!</button>
+</form>
+
+<p><%= @payment %></p>
+
+<!-- var executeMortgageCalc = function(){
+  var loan = parseFloat(document.getElementById("mortgage-loan").value);
+  var apr = parseFloat(document.getElementById("mortgage-apr").value) / 100 / 12;
+  var term = parseFloat(document.getElementById("mortgage-term").value);
+
+  var temp = Math.pow((1 + apr), term);
+  var payment = loan * apr * temp / temp - 1;
+
+  var rounded = Math.round(payment * 100) / 100;
+  showAnswer(rounded, "mortgage");
+}
+ -->

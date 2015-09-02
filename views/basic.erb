@@ -1,0 +1,10 @@
+<h1><%= @title %></h1>
+
+<form action="/basic" method= "post">
+  <input type="num" name= "num1" placeholder="Your number"autofocus>
+  <input type="operator" name="operator" placeholder="+, -, * or ?"autofocus>
+  <input type="num" name="num2" placeholder="Your number"autofocus>
+  <button type='submit'>calculate!</button>
+</form>
+
+<p><%= @answer %></p> 
