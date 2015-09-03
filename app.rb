@@ -72,4 +72,21 @@ post '/morg' do
 end
 
 
+get '/bmi' do
+  @title = 'BMI Calculator'
+  erb :bmi
+end
+
+post '/bmi' do
+
+  binding.pry
+  mass = params[:mass].to_i
+  height = params[:height].to_i
+  bmi = mass / (height ** 2)
+
+  puts bmi
+  @bmi = bmi
+  erb :bmi
+end
+
 

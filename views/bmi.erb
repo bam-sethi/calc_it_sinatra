@@ -1,0 +1,27 @@
+<h1><%= @title %></h1>
+
+<form action="/bmi" method="puts">
+  <input type="num" name="mass" placeholder="mass(kg)">
+  <input type="num" name="height" placeholder="height(m)">
+  <button type="submit">calculate BMI!</button>
+</form>
+
+<p><%= @bmi %></p>
+
+<!-- 
+var executeBmiCalc = function(){
+  var unit = document.getElementById("bmi-units").value;
+  var mass = parseFloat(document.getElementById("bmi-mass").value);
+  var height = parseFloat(document.getElementById("bmi-height").value);
+  var bmi;
+
+  if (unit === "metric"){
+    bmi = mass / Math.pow(height, 2);
+  } else {
+    bmi = ( mass / Math.pow(height, 2) ) * 703;
+  }
+
+  var rounded = Math.round(bmi * 100) / 100; // round it to two decimals
+  showAnswer(rounded, "bmi");
+}
+ -->
